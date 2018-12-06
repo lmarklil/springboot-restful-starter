@@ -1,2 +1,2 @@
 # springboot-restful-starter
-SpringBoot restful风格api手脚架
+Spring Boot RESTful 手脚架
