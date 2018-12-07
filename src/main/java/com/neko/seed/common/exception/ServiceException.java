@@ -2,6 +2,12 @@ package com.neko.seed.common.exception;
 
 import lombok.Getter;
 
+/**
+ * 服务异常类
+ *
+ * @author Li Jinhui
+ * @since 2018/12/6
+ */
 @Getter
 public class ServiceException extends RuntimeException {
     private int code;
