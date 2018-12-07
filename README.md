@@ -17,7 +17,7 @@ Spring Boot RESTful 手脚架
 
 ## 内置认证机制如何使用？
 1. 登陆成功后发放AccessToken
-··· java
+```java
     @GetMapping("/test")
     public Result test() {
     // Do something about sign in
@@ -26,14 +26,14 @@ Spring Boot RESTful 手脚架
     //generate方法参数解释 1.Token类型 2.Token payload 3.Token有效期
     return new Result().success(tokenService.generate(TokenType.ACCESS,payload,1))
     }
-···
+```
 2. 在需要认证的接口参数上使用@Auth注解，返回的参数是当前登陆的用户ID，在无Token时，系统会抛出未登录的异常。
-···java
+```java
     @GetMapping("/me")
     public Result me(@Auth int accountId) {
-
+        // Do something where you need to post accountId
     }
-···
+```
 
 ## 相关依赖
 * SpringBoot
