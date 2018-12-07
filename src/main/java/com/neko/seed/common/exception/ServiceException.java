@@ -12,7 +12,7 @@ import lombok.Getter;
 public class ServiceException extends RuntimeException {
     private int code;
     private String message;
-    private int errorCode;
+    private Integer errorCode;
 
     public ServiceException(int errorCode, String message) {
         this.code = 400;
@@ -24,5 +24,10 @@ public class ServiceException extends RuntimeException {
         this.code = code;
         this.message = message;
         this.errorCode = errorCode;
+    }
+
+    public ServiceException(String message, int code) {
+        this.code = code;
+        this.message = message;
     }
 }

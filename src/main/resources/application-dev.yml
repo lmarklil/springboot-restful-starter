@@ -1,3 +1,5 @@
+# 开发环境配置文件
+
 server:
   servlet:
     context-path: /         # 应用路径
@@ -26,3 +28,6 @@ spring:
   devtools:
     restart:
       enabled: true
+
+security:
+  origins: http://localhost:8080

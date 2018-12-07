@@ -1,3 +1,5 @@
+# 主配置文件
+
 spring:
   profiles:
     active: dev         # 当前环境
@@ -15,3 +17,7 @@ mybatis:
 server:
   tomcat:
     uri-encoding: UTF-8
+
+security:
+  token:
+    secret: YOUR SECRET + 64 BIT > OVJPIDSFWE\''F]\WE=F23=-4VXCNONSFIOEIWI023         # Token 密钥
