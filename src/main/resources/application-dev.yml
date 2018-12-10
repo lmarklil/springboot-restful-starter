@@ -2,8 +2,8 @@
 
 server:
   servlet:
-    context-path: /         # 应用路径
-  port: 8081
+    context-path: /         # 应用路径，可以通过设置路径来控制版本
+  port: 8081         # Springboot占用端口
 
 spring:
   datasource:
@@ -30,4 +30,4 @@ spring:
       enabled: true
 
 security:
-  origins: http://localhost:8080
+  origins: "*"         # 开发环境前端域名
