@@ -115,7 +115,8 @@ tokenService.generate(TokenType.ACCESS, payload, 1);
 String token = getYourToken();
 tokenService.parse(token); // 返回的结果是一个Jwt对象，详见JJWT文档
 ```
-### Auth注解（相关说明请见下面的「内置认证机制说明」）
+### Auth注解
+Auth注解用于获取当前用户的Token中的userId，在获取的同时会自动校验用户Token，若用户未登录则会抛出未登录的异常。
 ```java
 // 在controller中使用
 @PostMapping("/user/1/edit")
@@ -123,6 +124,8 @@ public Result edit(@Auth int userId, @ResponseBody sthPosted) {
     // 根据ID判断权限
 }
 ```
+### MybatisPlus集成
+相关使用方法请参考[官方文档](https://mp.baomidou.com/)
 
 ## 相关依赖
 * SpringBoot
@@ -132,8 +135,11 @@ public Result edit(@Auth int userId, @ResponseBody sthPosted) {
 * fastjson
 * druid
 
-## 相关文档
-* [MybatisPlus](https://mp.baomidou.com/)
+## 捐赠
+如果你觉得这个项目很赞且对你有帮助的话，请我喝一杯咖啡呗:)
+![捐赠二维码](./doc/donation.png)
+当然你也可以领取支付宝红包
+![支付宝红包](./doc/donation_alipay.png)
 
 ## License
 [MIT](./LICENSE)
