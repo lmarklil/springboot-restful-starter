@@ -139,7 +139,7 @@ public Result edit(@Auth int userId, @ResponseBody sthPosted) {
 如果你觉得这个项目很赞且对你有帮助的话，请我喝一杯咖啡呗:)
 ![捐赠二维码](./doc/img/donation.png)
 当然你也可以领取支付宝红包
-![支付宝红包](./doc/img/donation_alipay.png)
+![支付宝红包](./doc/img/donation_alipay_red_packet.png)
 
 ## License
 [MIT](./LICENSE)
