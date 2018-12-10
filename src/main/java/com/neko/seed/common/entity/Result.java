@@ -6,7 +6,6 @@ import lombok.Getter;
  * Result实体类
  *
  * @author Li Jinhui
- * @param <T>
  * @since 2018/12/6
  */
 @Getter
