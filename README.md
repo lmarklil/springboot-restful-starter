@@ -120,7 +120,7 @@ Auth注解用于获取当前用户的Token中的userId，在获取的同时会�
 ```java
 // 在controller中使用
 @PostMapping("/user/1/edit")
-public Result edit(@Auth int userId, @ResponseBody sthPosted) {
+public Result edit(@Auth int userId, @RequestBody sthPosted) {
     // 根据ID判断权限
 }
 ```
