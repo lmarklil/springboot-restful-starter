@@ -26,6 +26,8 @@ SpringBoot RESTful API 脚手架
 
 ## [更新日志](./docs/changelog.md)
 
+当前版本：2.0.0 Beta
+
 ## 基本功能
 
 - 封装了 RESTful 风格的返回结果
