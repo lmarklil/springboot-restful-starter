@@ -88,10 +88,10 @@ public class CodeGenerator {
         StrategyConfig strategy = new StrategyConfig();
         strategy.setNaming(NamingStrategy.underline_to_camel);
         strategy.setColumnNaming(NamingStrategy.underline_to_camel);
-        //strategy.setSuperEntityClass(PROJECT + ".common.BaseEntity");     // 自定义实体类继承
+        //strategy.setSuperEntityClass(PROJECT + ".base.BaseEntity");     // 自定义实体类继承
         strategy.setEntityLombokModel(true);
         strategy.setRestControllerStyle(true);
-        //strategy.setSuperControllerClass(PROJECT + ".common.BaseController");     // 自定义控制器继承
+        //strategy.setSuperControllerClass(PROJECT + ".base.BaseController");     // 自定义控制器继承
         strategy.setInclude(scanner("表名"));
         strategy.setSuperEntityColumns("id");
         strategy.setControllerMappingHyphenStyle(true);

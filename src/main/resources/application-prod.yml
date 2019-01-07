@@ -1,4 +1,12 @@
 # 生产环境配置文件
 
-security:
-  origins: "*"         # 生产环境前端域名，生产环境下建议限制域名，不要开启全局跨域。
+server:
+  port: 8081     # Springboot占用端口（生产环境）
+
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver     # 数据库驱动
+      url: jdbc:mysql://localhost:3306/seed?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useUnicode=true&useSSL=false     # 数据库链接（生产环境）
+      username: root     # 数据库账号（生产环境）
+      password: root     # 数据库密码（生产环境）

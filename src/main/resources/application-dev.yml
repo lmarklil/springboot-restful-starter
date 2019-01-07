@@ -1,33 +1,15 @@
 # 开发环境配置文件
 
 server:
-  servlet:
-    context-path: /         # 应用路径，可以通过设置路径来控制版本
-  port: 8081         # Springboot占用端口
+  port: 8081     # Springboot占用端口
 
 spring:
   datasource:
     druid:
-      driver-class-name: com.mysql.cj.jdbc.Driver         # 数据库访问配置,主数据源，默认的
-      url: jdbc:mysql://localhost:3306/seed?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useUnicode=true&useSSL=false
-      username: root
-      password: root
-      initial-size: 5         # 下面为连接池的补充设置，应用到上面所有数据源中,初始化大小，最小，最大
-      min-idle: 5
-      max-active: 20
-      max-wait: 60000         # 配置获取连接等待超时的时间
-      time-between-eviction-runs-millis: 60000         # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
-      min-evictable-idle-time-millis: 300000         # 配置一个连接在池中最小生存的时间，单位是毫秒
-      validation-query: SELECT 1
-      test-while-idle: true
-      test-on-borrow: false
-      test-on-return: false
-      pool-prepared-statements: true         # 打开PSCache，并且指定每个连接上PSCache的大小
-      max-pool-prepared-statement-per-connection-size: 20
-      filters: stat         # 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+      driver-class-name: com.mysql.cj.jdbc.Driver     # 数据库驱动
+      url: jdbc:mysql://localhost:3306/seed?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useUnicode=true&useSSL=false     # 数据库链接
+      username: root     # 数据库账号
+      password: root     # 数据库密码
   devtools:
     restart:
-      enabled: true
-
-security:
-  origins: "*"         # 开发环境前端域名
+      enabled: true     # 开启热更新

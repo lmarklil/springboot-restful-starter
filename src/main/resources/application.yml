@@ -1,23 +1,20 @@
-# 主配置文件
+# 基础配置文件
 
 spring:
   profiles:
-    active: dev         # 当前环境
+    active: dev     # 配置文件环境
   http:
     encoding:
       force: true
       charset: utf-8
       enabled: true
   mvc:
-    throw-exception-if-no-handler-found: true
-
-mybatis:
-  mapper-locations: classpath:mybatis/*Mapper.xml
+    throw-exception-if-no-handler-found: true     # 接口404时抛出异常
+  resources:
+    add-mappings: false
 
 server:
+  servlet:
+    context-path: /v1     # 应用路径，可以通过设置路径来控制版本
   tomcat:
     uri-encoding: UTF-8
-
-security:
-  token:
-    secret: YOUR SECRET + 64 BIT > OVJPIDSFWE\''F]\WE=F23=-4VXCNONSFIOEIWI023         # Token 密钥
